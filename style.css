@@ -1,52 +1,82 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+:root {
+    --dark-color: #160c28;
+    --light-color: #ffffff;
+}
 
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: 'Arial';
     color: white;
-    font-family: 'Space Mono';
 }
 
 body {
-    background: linear-gradient(to left, #009FFD, #232528);
-    animation: move 5s ease infinite;
+    background: linear-gradient(to right, #111, #113);
     background-size: 200%;
+    animation: move 10s ease-in-out infinite;
 }
 
 @keyframes move {
-    0% {
-        background-position: 0% 50%;
+
+    from,
+    to {
+        background-position: 0 50%;
     }
+
     50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
+        background-position: -100% 50%;
     }
 }
 
-/* Double underscore - child in "block" */
-/* Double dash - modification to "block" */
+/* 
+    __ = child
+    -- = modifier
+*/
 
-.content {
-    text-align: center;
+.card {
     display: flex;
     flex-flow: column wrap;
-    gap: 5em;
+    gap: 1em;
+    padding: 4em 10em 0 10em;
+    color: rgb(223, 223, 223);
 }
 
-.content__h1 {
-    margin-top: 2em;
+.card__section {
+    display: flex;
+    place-content: center;
+    padding: 2em 0 2em 0;
+}
+
+.card__section--black {
+    background-color: black;
+}
+
+.card__section--fire {
+    background-color: firebrick;
+}
+
+.card__section--lightblue {
+    background-color: rgb(0, 140, 255);
+}
+
+.section__h2 {
     font-size: xx-large;
-    font-family: 'Gill Sans';
-    font-weight: bold;
 }
 
-.content__p {
+.section__h2--orange {
+    color: orange;
+}
+
+.section__p {
+    font-size: small;
+    width: 500px;
+}
+
+.section__pre {
+    background-color: #111;
+}
+
+.section__pre-medium {
     font-size: medium;
-}
-
-.content__img {
-    padding: 1em;
 }

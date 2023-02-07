@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,32 +8,53 @@
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
+
 <body>
-    <main class="content">
-        <section class="content__section--border">
-            <h1 class="content__h1 content__h1--yellow">Hvad er BEM?</h1>
-            <p class="content_p">BEM er en navngivnings konvention for at holde dit html og css kode organiseret og vedligeholdet. <br> Et eksempel kunne være, at man har flere referencer for .card eller .container. Dette ville skabe et problem, dog ved hjælp af BEM ændres navngivningen og kan derfor bedre forstås og læses hvad der tilhører hvad. </p>
+    <main class="card">
+        <section class="card__section card__section--black">
+            <h2 class="section__h2 section__h2--orange">Hvorfor BEM?</h2">
+                <p class="section__p ">Hvis vi læser HTMl'en er det muligt at hurtigt finde ud af hvilke tags har hvilke
+                    attributter tilhørende til sig. det er
+                    dop også muligt for et team af webudvikler at hurtigt finde rundt i deres of andres kode da der
+                    bliver brugt en fælles name
+                    konvention, derfor ved man hvad man skal lede efter, som tydeligvis forhøjer effektiviteten af
+                    teamet.</p>
         </section>
-        <hr>
-        <section class="content__section--border">
-            <h1 class="content__h1 content__h1--yellow">Hvad Står BEM for?</h1>
-            <p class="content__p">Block, Element, Modification</p>
+        <section class="card__section card__section--fire">
+            <h2 class="section__h2 section__h2--orange">Hvordan bruges det?</h2">
+                <pre>
+                        <p class="section__p">Indenfor BEM følger vi strukturen - block__element--modifer
+                        
+__ betyder at der kommer et child efter de to underscores
+-- betyder at der kommer en modifier efter de to dashes/hypen
+                        
+i den virkelige verden kan de se anderledes ud, men dette to er de mest brugte
+                        
+block some er det der container alle dine elementer, det kunne være en card- eller en
+container klasse
+                        
+element er et hvert som helst element der lægger under blocked, også kladet child elementet
+                        
+modifier er ikke noget eksisternde indenfor blocken eller elementet, det er kun en tilføjelse og
+dette kunne være color, invert, shadow osv.</p>
+                    </pre>
         </section>
-        <hr>
-        <section class="content__section--border">
-            <h1 class="content__h1 content__h1--yellow">Eksempel for god ordens skyld</h1> 
-            <img class="content__img" src="code1.png">
-        </section>
-        <hr>
-        <section class="content__section--border">
-            <h1 class="content__h1 content__h1--yellow">B-E-M</h1>
-            <p class="content__p">
-                Block- er et objekt der beskriver hvad containeren/parentet til indholdet der er inde i
-                Element- det er en af de ting der altid skal lægge under en block, og måden man finder ud af om det er et element, er ved at kigge på de 2 underscores der adskiller block of elementet 
-                Modifier- er anderledes fra element, da modifier ikke vil befinde sig som et child af blocken, men det vil ændre på en af følgende omkring blocket. Det vil ændre på udseendet, staten og opførslen af blocken. Det skal siges at modifier også vises anderledes, da det repræsenteret med 2 dashes 
-                Så basalt sagt er Block og elementet formen, og modifier er udseenet 
-            </p>
+        <section class="card__section card__section--lightblue">
+            <h2 class="section__h2 section__h2--orange">Correkt Navngivning</h2">
+            <pre class="section__pre section__pre-medium">
+                <code>
+                            .section__h2--orange {
+    ✔ Rigtig                   color: orange;
+                            }
+                </code>
+                <code>
+                            .h2--orange {
+    ✖ Fokert                   color: orange;
+                            }
+                </code>
+            </pre>
         </section>
     </main>
 </body>
+
 </html>
